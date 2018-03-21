@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/user/user",
+    "pages/map/map",
+    "pages/logs/logs",
+    "pages/StartPage/startPage",
+    "pages/ShowHelp/showHelp",
+    "pages/Setting/setting",
+    "pages/Register/register"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "red",
+    "navigationBarTitleText": "一键呼救",
+    "navigationBarTextStyle":"black"
+  }
+}

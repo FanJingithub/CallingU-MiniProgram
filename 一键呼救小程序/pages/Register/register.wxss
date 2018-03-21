@@ -1,0 +1,31 @@
+.content{
+  margin-left: 90rpx;
+  margin-right: 90rpx;
+}
+text.stronger{
+  font-weight: bold;
+  text-align: left;
+}
+.title{
+  color: red;
+  margin-top: 1pc;
+  margin-bottom: 1pc;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2pc;
+  text-align: center;
+}
+button {
+  width: 50%;
+  margin-top: 1pc;
+  color: red;
+  font-size: smaller;
+}
+.small{
+  font-size: small;
+  margin-bottom: 1pc;
+  color: gainsboro;
+}
+input{
+  margin-top: 20rpx;
+  font-size: smaller;
+}

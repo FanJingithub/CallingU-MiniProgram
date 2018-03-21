@@ -1,0 +1,34 @@
+<view class='content'>
+  <view class='auto choice'> 
+    <view>
+      <text>自动拨打120</text>
+    </view>
+    <view class='small'>
+      <text>开启后，当确认呼救时，将自动拨打120</text>
+    </view>
+   <switch type='switch'  bindchange='sw120Change' id='swCall120'></switch>
+  </view>
+   <view class='auto'>
+    <view>
+      <text>自动发送短信</text>
+    </view>
+    <view class='small'>
+     <text>开启后，当确认呼救时，将自动发送短信告知亲友</text>
+    </view>
+    <switch type='switch'  bindchange='swmessageChange' id='swmessage'></switch>
+  </view>
+  <view class='edit'>
+  <text>联系人：</text>
+  <form bindsubmit='contactsubmit'>
+  <textarea placeholder="{{contact.number}}" disabled="contact.disabled" focus="{{contact.focus}}" name="contactTextarea"></textarea>
+  <button form-type='submit' disabled="{{messDisabled}}">{{contact.editContact}}</button>
+  </form>
+  </view> 
+  <view class='edit'>
+  <text>短信：</text>
+  <form bindsubmit='messagesubmit'>
+  <textarea placeholder="{{message.showmessage}}" disabled="message.disabled" focus="{{message.focus}}" name="messageTextarea"></textarea>
+  <button form-type='submit' disabled="{{messDisabled}}">{{message.editMessage}}</button>
+  </form>
+  </view>
+</view>

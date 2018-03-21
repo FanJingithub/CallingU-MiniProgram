@@ -1,0 +1,3 @@
+<view class="container">
+<map id="location" latitude="{latitude}" longitude='{longitude}' scale='{scale}' show-location='true'></map>
+</view>

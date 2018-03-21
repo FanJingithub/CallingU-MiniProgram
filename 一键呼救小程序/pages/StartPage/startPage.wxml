@@ -1,0 +1,13 @@
+<view class='content'>
+<text class='title'>一键呼救登录</text>
+<text class='stronge reminder'>手机号码验证</text>
+<text class='small reminder'>请输入您的手机号，该手机号作为救护时的联系电话，请务必保证有效</text>
+<input type='text' placeholder='请输入您的姓名' bindinput='usernameInput'></input>
+<input type='text' placeholder='请输入手机号' bindinput='numberInput'></input>
+<view class='codeView'>
+<input type='number' placeholder='验证码' bindinput='code' class='code'></input>
+<button class='getCode' bindtap='getCode' disabled='{{disabled}}' hover-class='hover'>{{sendCode}}</button>
+</view>
+<button id="logIn" bindtap='logIn'  hover-class='hover'>登录</button>
+<!--<button id="register" bindtap='register'>注册</button>-->
+</view>
