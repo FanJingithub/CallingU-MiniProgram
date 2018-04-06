@@ -1,9 +1,9 @@
 var app=getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
+
   data: {
     open:false,
     username: app.appData.userinfo.username,
@@ -35,7 +35,7 @@ tap_close:function(e){
           latitude: res.latitude
         });
         wx.request({
-          url: "https://118.89.111.214/api/getHelp",
+          url: "https://118.89.111.214:6666/api/get-help",
           data: {
             number: this.data.number,
             latitude: this.data.latitude,
@@ -63,7 +63,7 @@ tap_close:function(e){
           latitude: res.latitude
         });
         wx.request({
-          url: "https://118.89.111.214/api/getHelp",
+          url: "https://118.89.111.214:6666/api/get-help",
           data: {
             number: this.data.number,
             latitude: this.data.latitude,
@@ -82,12 +82,12 @@ tap_close:function(e){
     })
   },
   setting:function(){
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../Setting/setting',
     })
   },
   showHelp:function(){
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../ShowHelp/showHelp',
     })
   },
@@ -96,10 +96,11 @@ tap_close:function(e){
    */
   onLoad: function (options) {
     if (app.appData.userinfo.username==null){
-      wx.redirectTo({
+      wx.navigateTo({
         url: '../StartPage/startPage'
       })
-    } else {
+    }
+     else {
       this.setData({ 
         username: app.appData.userinfo.username,
         number:app.appData.userinfo.number
@@ -114,19 +115,18 @@ tap_close:function(e){
       sos: -1,
       message: null,
     }
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../StartPage/startPage',
     })
   },
-  onUnload: function () {
-    wx.navigateBack({
-      delta: 1
+
+onShow:function(){
+    this.setData({
+      username: app.appData.userinfo.username,
+      number: app.appData.userinfo.number,
+      longitude:0,
+      latitude:0
     })
-  },
-  onUnload: function(){
-    wx.navigateBack({
-      delta:1
-    })
-  },
+},
 
 })

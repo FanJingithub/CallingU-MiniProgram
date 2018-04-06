@@ -1,9 +1,9 @@
 {
   "pages":[
+      "pages/StartPage/startPage",
     "pages/user/user",
     "pages/map/map",
     "pages/logs/logs",
-    "pages/StartPage/startPage",
     "pages/ShowHelp/showHelp",
     "pages/Setting/setting",
     "pages/Register/register"

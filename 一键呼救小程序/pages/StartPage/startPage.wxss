@@ -8,10 +8,10 @@
 }
 text.title{
   color: red;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2pc;
+  font-size: 60rpx;
   text-align: center;
 }
 text.stronger{
@@ -20,36 +20,36 @@ text.stronger{
 }
 .small{
   font-size: small;
-  margin-bottom: 1pc;
+  margin-bottom: 10rpx;
   color: gainsboro;
 }
 .reminder{
   text-align: left;
-  padding-left: 1pc;
-  padding-right: 1pc;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
   width: 80%;
 }
 #logIn{
  font-size: large;
  color: white;
  background-color: red;
- margin-top: 1pc;
+ margin-top: 10rpx;
  width: 100%;
- padding: 5px;
+ padding: 5rpx;
 }
 input{
-  margin-bottom: 15px;
-  border: 1px solid lightgray;
-  border-radius: 6px;
+  margin-bottom: 20rpx;
+  border: 1rpx solid lightgray;
+  border-radius: 6rpx;
   padding:20rpx;
 }
 .getCode{
   font-size: small;
   color: white;
   background-color: red;
-  padding: 10rpx;
+  padding: 6rpx;
   width: 35%;
-  height: 100rpx;
+  height: 92rpx;
 }
 .codeView{
   display: flex;
@@ -59,4 +59,7 @@ input{
 }
 .code{
 width: 54%;
+}
+#nameIcon{
+  margin-top: 
 }

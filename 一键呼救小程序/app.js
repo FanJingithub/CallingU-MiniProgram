@@ -6,7 +6,9 @@ appData: {
     key:null,
     sos:-1,
     message:null,
-    autoMessage:false
+    contact:null,
+    autoMessage:false,
+    autoCall:false,
   }
 },
 onLoad: {
