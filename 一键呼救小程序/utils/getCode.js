@@ -17,19 +17,21 @@ function countDown(that,currentTime){
 }
 
 function getCode(that) {
+  console.log(that.data.number);
     wx.request({
-        url: 'http://118.89.111.214:6666/api/identify-code',
+        url: 'http://118.89.111.214:2333/api/identify-code',
         data: {
-          number:that.data.number
+         "number":that.data.number
         },
        header: {
-         'content-type': 'application/json' // 默认值
+         'content-type': ' application/x-www-form-urlencoded' // 默认值
        },
       method: 'POST',
       success: function (res) {
         if(res.data=='001')
            countDown(that, 60);
         else{
+          console.log("错误信息："+res.data);
           wx.showModal({
             title: "提示",
             content: '服务器出现未知错误！',

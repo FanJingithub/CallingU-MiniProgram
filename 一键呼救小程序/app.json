@@ -2,16 +2,17 @@
   "pages":[
       "pages/StartPage/startPage",
     "pages/user/user",
-    "pages/map/map",
+    "pages/getHelp/getHelp",
     "pages/logs/logs",
     "pages/ShowHelp/showHelp",
     "pages/Setting/setting",
-    "pages/Register/register"
+    "pages/Register/register",
+    "pages/giveAdvice/giveAdvice"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "red",
+    "navigationBarBackgroundColor": "#db554e",
     "navigationBarTitleText": "一键呼救",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"gray"
   }
 }

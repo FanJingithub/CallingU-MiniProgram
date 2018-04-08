@@ -6,8 +6,9 @@
   align-items: center;
   box-sizing: border-box;
  background-repeat: repeat;
- background-color:darkgray;
  padding-bottom: 240rpx;
+ padding-top: 30rpx;
+ background: rgb(240, 240,240)
 } 
 .small{
   font-size: smaller;
@@ -17,19 +18,19 @@
 #swCall120{
   position: absolute;
   left: 80%;
-  top:2%;
+  top:60rpx;
 }
 #swmessage{
   position: absolute;
   left: 80%;
-  top:14%;
+  top:200rpx;
 }
 .choice{
-  height: 150rpx;
+  height: 120rpx;
   margin-bottom: 10rpx;
   width: 95%;
   border-bottom-style: solid;
-  border-bottom-color: white;
+  border-bottom-color: gray;
   border-width: 2rpx;
 }
 .auto{
@@ -45,7 +46,8 @@ textarea{
 }
 button{
   box-shadow: 2rpx,2rpx,2rpx,2rpx;
-  color: red;
+  background-color:  rgb(219,85,79);
+  color: white;
   font-size: small;
 }
 .edit{

@@ -1,0 +1,6 @@
+<view class='container'>
+<form bindsubmit='textareaSubmit'>
+<textarea bindinput='advice' name="adviceTextarea" class='adviceTextarea' placeholder='请输入对我们的意见或建议' maxlength='400'></textarea>
+<button form-type='submit' class='btSubmit'>提交</button>
+</form>
+</view>

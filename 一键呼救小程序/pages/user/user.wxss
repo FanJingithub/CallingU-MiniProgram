@@ -1,32 +1,39 @@
 /* pages/user/user.wxss */
-.container{
+.page{
    height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   background-repeat: repeat;
- padding: 30rpx;
+  background: rgb(240,240,240);
+   font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
 }
 
 /*侧边栏*/
-page,.page {
-  height: 100%;
-  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
-}
 .page-bottom{
   height: 100%;
   width: 750rpx;
   position: fixed; 
-  background-color: red;
+  background-color: rgb(240,240,240);
   z-index: 0;
 }
 .wc{
-  color: white;
-  padding: 30rpx 0 30rpx 40rpx;
+  color: black;
+  padding: 30rpx 0 30rpx 30rpx;
+  display: inline-block;
+}
+.more{
+  width: 50rpx;
+  height:30rpx;
+  margin-left: 450rpx;
+  margin-top: -40rpx;
+  shape-image-threshold: 5rpx;
+  display: flex;
 }
 .page-content{
-  padding-top: 300rpx;
+ background: white;
+ padding-bottom: 30rpx;
 }
 .page-top{
   height: 100%;
@@ -42,15 +49,15 @@ page,.page {
   width: 600rpx;
   height: 500rpx;
   margin-top: 60rpx;
-  margin-left: 80rpx;
+  margin-left: 75rpx;
   shape-image-threshold: 5rpx;
 }
 .mark{
   position: absolute;
-  width: 68rpx;
-  height: 68rpx;
-  left: 20rpx;
-  top: 5rpx;
+  width: 60rpx;
+  height: 60rpx;
+  top:0ch;
+  left: 0;
 }
 .c-state1{
   transform: rotate(0deg) scale(1) translate(75%,0%); 
@@ -59,17 +66,22 @@ page,.page {
 .personName{
  position: absolute;
  left: 200rpx;
- top:60rpx;
+ top:160rpx;
 }
 .personNumber{
   position: absolute;
   left: 200rpx;
   top: 110rpx;
 }
+.personInfo{
+ /* background: rgb(240, 240, 240);*/
+  height: 350rpx;
+  width:750rpx;
+}
 .perImg{
   width: 120rpx;
   height: 120rpx;
   position: fixed;
   left: 40rpx;
-  top: 40rpx;
+  top: 80rpx;
 }

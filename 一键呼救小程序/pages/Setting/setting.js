@@ -122,7 +122,7 @@ editContact: function(e){
       var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
       if(myreg.test(this.data.contact.showContact)){
         wx.request({
-          url: "http://118.89.111.214:6666/api/set-message",
+          url: "http://118.89.111.214:2333/api/set-message",
           data: {
             number: this.data.contact.showContact,
             message: this.data.contact.showMessage,

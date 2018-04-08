@@ -7,7 +7,7 @@
  padding: 60rpx;
 }
 text.title{
-  color: red;
+  color:  rgb(219,85,79);
   margin-top: 10rpx;
   margin-bottom: 10rpx;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -21,7 +21,7 @@ text.stronger{
 .small{
   font-size: small;
   margin-bottom: 10rpx;
-  color: gainsboro;
+  color:gray;
 }
 .reminder{
   text-align: left;
@@ -32,7 +32,7 @@ text.stronger{
 #logIn{
  font-size: large;
  color: white;
- background-color: red;
+ background-color: rgb(219,85,79);
  margin-top: 10rpx;
  width: 100%;
  padding: 5rpx;
@@ -46,7 +46,7 @@ input{
 .getCode{
   font-size: small;
   color: white;
-  background-color: red;
+  background-color: rgb(219,85,79);
   padding: 6rpx;
   width: 35%;
   height: 92rpx;
@@ -59,7 +59,4 @@ input{
 }
 .code{
 width: 54%;
-}
-#nameIcon{
-  margin-top: 
 }

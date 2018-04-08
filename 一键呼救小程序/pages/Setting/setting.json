@@ -1,1 +1,8 @@
-{}
+{
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "red",
+    "navigationBarTitleText": "求救信息列表",
+    "navigationBarTextStyle": "white"
+  }
+  }

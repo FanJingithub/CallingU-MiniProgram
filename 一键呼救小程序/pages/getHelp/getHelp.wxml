@@ -1,0 +1,3 @@
+<view class="container">
+<map id="getHelpMap" latitude="{{latitude}}" longitude='{{longitude}}' scale='{{scale}}' show-location/>
+</view>
