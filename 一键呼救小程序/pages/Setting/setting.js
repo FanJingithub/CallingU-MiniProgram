@@ -122,13 +122,14 @@ editContact: function(e){
       var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
       if(myreg.test(this.data.contact.showContact)){
         wx.request({
-          url: "http://118.89.111.214:2333/api/set-message",
+          url: "https://118.89.111.214:2333/api/set-message",
           data: {
             number: this.data.contact.showContact,
             message: this.data.contact.showMessage,
           },
           header: {
-            'content-type': 'application/json' // 默认值
+            'content-type': 'application/x-www-form-urlencoded',// 表单
+            "cookie": wx.getStorageSync("sessionid"),
           },
           method: "POST",
           success: function (res) {

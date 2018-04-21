@@ -3,7 +3,6 @@
       "pages/StartPage/startPage",
     "pages/user/user",
     "pages/getHelp/getHelp",
-    "pages/logs/logs",
     "pages/ShowHelp/showHelp",
     "pages/Setting/setting",
     "pages/Register/register",

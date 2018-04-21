@@ -74,7 +74,6 @@
   top: 110rpx;
 }
 .personInfo{
- /* background: rgb(240, 240, 240);*/
   height: 350rpx;
   width:750rpx;
 }

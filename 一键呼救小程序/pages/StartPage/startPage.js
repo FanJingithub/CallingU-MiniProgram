@@ -11,7 +11,8 @@ Page({
     key: null,
     sendCode: "获取验证码",
     disabled: false,
-    islogIn:false
+    islogIn:false,
+    ciphertext:null
   },
 
   /*获取验证码*/
@@ -35,7 +36,7 @@ Page({
   },
 
   logIn:function(){
-     if (this.data.username == null && this.data.number == null){    
+    if (this.data.username == null && this.data.number == null){    
       wx.showModal({
         title: "提示",
         content: '请输入姓名和手机号！',
@@ -59,31 +60,34 @@ Page({
       if(this.data.number!=null && this.data.username!=null){
         app.appData.userinfo.username = this.data.username;
         app.appData.userinfo.number = this.data.number;
-        app.appData.userinfo.key = this.data.key;
-        var timestamp = Math.round(new Date().getTime() / 1000);
+      
         wx.request({
           url: "https://118.89.111.214:2333/api/login",
+          header: {
+            'content-type': 'application/x-www-form-urlencoded' // 表单
+          },
+          method:"POST",
           data: {
             "number": this.data.number,
-          "timestamp":timestamp,
-           "ciphertext": " ",
-            
+            "code":this.data.code,
           },
-          method: "POST",
           success: function (res) {
-            if (res.data == "001") {
-              this.setData({islogIn:true})
+            console.log(res);
+            if (res.statusCode == app.appData.stateCode.success) {
+              this.setData({islogIn:true});
+              wx.setStorageSync("sessionid", res.header["Set-Cookie"])
+              wx.redirectTo({ url: "../user/user" });
             }
-            else if(res.data=="004"){
+            else if (res.data[0].result == app.appData.stateCode.codeFault){
               wx.showModal({
                 title: "提示",
-                content: '手机号或密码错误！',
+                content: '验证码错误！',
                 showCancel: false,
               })
             }
           }
         })
-        wx.redirectTo({ url: "../user/user" });
+      //  wx.redirectTo({ url: "../user/user" });
        }
   },
   usernameInput: function(event){
@@ -92,11 +96,14 @@ Page({
   numberInput:function(event){
    this.setData({number:event.detail.value})
   },
-
   register: function () {
     wx.navigateTo({
       url:  '../Register/register',
     })
   },
-  
+  inputCode:function(e){
+    this.setData({
+      code:e.detail.value
+    })
+  },
 })

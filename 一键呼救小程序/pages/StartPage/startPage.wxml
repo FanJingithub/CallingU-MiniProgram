@@ -5,7 +5,7 @@
 <input type='text' placeholder='请输入您的姓名' bindinput='usernameInput'  id="nameInput"></input>
 <input type='number' placeholder='请输入手机号' bindinput='numberInput' id="numberInput"></input>
 <view class='codeView'>
-<input type='number' placeholder='验证码' bindinput='code' class='code'></input>
+<input type='number' placeholder='验证码' bindinput='inputCode' class='code'></input>
 <button class='getCode' bindtap='getCode' disabled='{{disabled}}' hover-class='hover'>{{sendCode}}</button>
 </view>
 <button id="logIn" bindtap='logIn'  hover-class='hover'>登录</button>

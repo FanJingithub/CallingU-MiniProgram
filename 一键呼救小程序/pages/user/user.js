@@ -3,7 +3,6 @@ Page({
   /**
    * 页面的初始数据
    */
-
   data: {
     open:false,
     username: app.appData.userinfo.username,
@@ -45,7 +44,7 @@ tap_close:function(e){
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
- /*   if (app.appData.userinfo.username==null){
+    if (app.appData.userinfo.username==null){
       wx.navigateTo({
         url: '../StartPage/startPage'
       })
@@ -55,18 +54,27 @@ tap_close:function(e){
         username: app.appData.userinfo.username,
         number:app.appData.userinfo.number
          });
-    }*/
+    }
   },
   logoff:function(){
-    app.appData.userinfo = {
-      username: null,
-      number: 0,
-      key: null,
-      sos: -1,
-      message: null,
-    }
-    wx.navigateTo({
-      url: '../StartPage/startPage',
+    wx.showModal({
+      title: "提示",
+      content: '您真的确定退出吗？',
+      showCancel: true,
+      success:function(res){
+        if(res.confirm){
+          app.appData.userinfo = {
+             username: null,
+             number: 0,
+             key: null,
+             sos: -1,
+             message: null,
+          }
+         wx.redirectTo({
+           url: '../StartPage/startPage',
+        })
+      }
+      },
     })
   },
 giveAdvice:function(){
@@ -76,6 +84,7 @@ giveAdvice:function(){
 },
 onShow:function(){
     this.setData({
+      open:false,
       username: app.appData.userinfo.username,
       number: app.appData.userinfo.number,
       longitude:0,
