@@ -19,7 +19,7 @@ function getCode(that) {
 //  countDown(that, 60);
   console.log(that.data.number);
     wx.request({
-        url: 'https://www.xiaobenji.net/api/identify-code',
+        url: 'http://118.89.111.214:2333/api/identify-code',
         data: {
          "number":that.data.number
         },
@@ -28,7 +28,8 @@ function getCode(that) {
        },
       method: 'POST',
       success: function (res) {
-     //   console.log(res.statusCode);
+        console.log("hhh");
+      console.log(res.statusCode);
        // console.log(that.data.number);
         if(res.statusCode=='200')
            countDown(that, 60);
@@ -45,7 +46,7 @@ function getCode(that) {
           });
         }
       },
-      fail:function(){
+      fail:function(res){
         console.log("request fail");
       }
     });

@@ -67,7 +67,7 @@ Page({
          },
          method: "POST",
          success: function (res) {
-           if (res.data != "002" || res.data.wrong != 1) {
+           if (res.statusCode != "200" || res.data.wrong != 1) {
 
            } 
          }

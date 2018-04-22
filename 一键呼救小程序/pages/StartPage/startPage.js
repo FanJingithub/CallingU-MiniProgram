@@ -60,7 +60,7 @@ Page({
       if(this.data.number!=null && this.data.username!=null){
         app.appData.userinfo.username = this.data.username;
         app.appData.userinfo.number = this.data.number;
-      
+    
         wx.request({
           url: "https://118.89.111.214:2333/api/login",
           header: {
@@ -72,7 +72,8 @@ Page({
             "code":this.data.code,
           },
           success: function (res) {
-            console.log(res);
+            console.log("ppp");
+            console.log(res.statusCode);
             if (res.statusCode == app.appData.stateCode.success) {
               this.setData({islogIn:true});
               wx.setStorageSync("sessionid", res.header["Set-Cookie"])
@@ -85,6 +86,9 @@ Page({
                 showCancel: false,
               })
             }
+          },
+          fail:function(){
+            console.log("fail");
           }
         })
       //  wx.redirectTo({ url: "../user/user" });
