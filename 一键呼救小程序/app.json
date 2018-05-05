@@ -5,7 +5,6 @@
     "pages/getHelp/getHelp",
     "pages/ShowHelp/showHelp",
     "pages/Setting/setting",
-    "pages/Register/register",
     "pages/giveAdvice/giveAdvice"
   ],
   "window":{

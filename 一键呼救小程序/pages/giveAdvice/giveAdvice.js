@@ -13,14 +13,14 @@ Page({
       clicked:true
     })
     wx.request({
-      url: "https://118.89.111.214:2333/api/feedback",
+      url: "https://www.xiaobenji.net/api/feedback",
       data: {
         "number": app.appData.userinfo.number,
         "plaintext":this.data.adviceText,
       },
       method: "POST",
       success: function (res) {
-        if (res.data[0].result == "001") {
+        if (res.statusCode == "200") {
           wx.showModal({
             title: "感谢",
             content: '您的建议对我们非常重要！',

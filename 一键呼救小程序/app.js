@@ -3,7 +3,6 @@ appData: {
   userinfo : {
     username:null,
     number:null,
-    sos:-1,
     message:null,
     contact:null,
     autoMessage:false,
@@ -18,7 +17,4 @@ appData: {
     codeFault:"201",
   }
 },
-onLoad: {
-  
-}
 })

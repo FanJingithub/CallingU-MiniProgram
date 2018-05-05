@@ -60,9 +60,11 @@ Page({
       if(this.data.number!=null && this.data.username!=null){
         app.appData.userinfo.username = this.data.username;
         app.appData.userinfo.number = this.data.number;
-    
+        this.setData({
+                islogIn:true
+              });
         wx.request({
-          url: "https://118.89.111.214:2333/api/login",
+          url: "https://www.xiaobenji.net/api/login",
           header: {
             'content-type': 'application/x-www-form-urlencoded' // 表单
           },
@@ -72,14 +74,11 @@ Page({
             "code":this.data.code,
           },
           success: function (res) {
-            console.log("ppp");
-            console.log(res.statusCode);
-            if (res.statusCode == app.appData.stateCode.success) {
-              this.setData({islogIn:true});
+            if (res.data.result=='1') {
               wx.setStorageSync("sessionid", res.header["Set-Cookie"])
               wx.redirectTo({ url: "../user/user" });
             }
-            else if (res.data[0].result == app.appData.stateCode.codeFault){
+            else {
               wx.showModal({
                 title: "提示",
                 content: '验证码错误！',
@@ -91,7 +90,6 @@ Page({
             console.log("fail");
           }
         })
-      //  wx.redirectTo({ url: "../user/user" });
        }
   },
   usernameInput: function(event){

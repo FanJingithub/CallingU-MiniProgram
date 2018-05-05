@@ -16,10 +16,9 @@ function countDown(that,currentTime){
   }, 1000)
 }
 function getCode(that) {
-//  countDown(that, 60);
   console.log(that.data.number);
     wx.request({
-        url: 'http://118.89.111.214:2333/api/identify-code',
+      url: 'http://www.xiaobenji.net/api/identify-code',
         data: {
          "number":that.data.number
         },
@@ -28,9 +27,6 @@ function getCode(that) {
        },
       method: 'POST',
       success: function (res) {
-        console.log("hhh");
-      console.log(res.statusCode);
-       // console.log(that.data.number);
         if(res.statusCode=='200')
            countDown(that, 60);
         else{

@@ -17,17 +17,22 @@ Page({
       });
     }
   },
-tap_close:function(e){
-  if(this.data.open){
-    this.setData({
-      open:false
-    });
-  }
-},
+  tap_close:function(e){
+    if(this.data.open){
+      this.setData({
+        open:false
+      });
+    }
+  },
  
-  getHurt:function(){
+  syncope:function(){
     wx.navigateTo({
-      url: '../getHelp/getHelp',
+      url: '../getHelp/getHelp?helpType=syncope',
+    })
+  },
+  seriousInjury:function(){
+    wx.navigateTo({
+      url: '../getHelp/getHelp?helpType=seriousInjury',
     })
   },
   setting:function(){

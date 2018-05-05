@@ -2,14 +2,34 @@
 .content {
  position: relative;
  width: 100%;
- height: 100vh;/*高度占满设备*/
- z-index: 0;
+ height: 100%
 }
 #getHelpMap{
   position: absolute;
   left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0;
   width: 100%;
-  height: 100%;
+  height: 600rpx;
+}
+.showhelpInfo{
+  position: absolute;
+  left: 50rpx;
+  top:620rpx;
+  width:86%;
+  height: 400rpx
+}
+#cancelHelp{
+  position: absolute;
+  left: 50rpx;
+  top:1050rpx;
+  width: 86%;
+  box-shadow: 2rpx,2rpx,2rpx,2rpx;
+  background-color:rgb(219,85,79);
+  color: white;
+}
+.helpType{
+  color: rgb(219,85,79);
+}
+.helpMessage{
+  color: rgb(219,85,79);
 }

@@ -46,16 +46,16 @@
 }
 .getHelp{
   background-repeat: round;
-  width: 600rpx;
+  width: 640rpx;
   height: 500rpx;
   margin-top: 60rpx;
-  margin-left: 75rpx;
+  margin-left: 55rpx;
   shape-image-threshold: 5rpx;
 }
 .mark{
   position: absolute;
-  width: 60rpx;
-  height: 60rpx;
+  width: 70rpx;
+  height: 70rpx;
   top:0ch;
   left: 0;
 }

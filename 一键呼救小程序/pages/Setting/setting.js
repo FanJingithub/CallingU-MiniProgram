@@ -122,7 +122,7 @@ editContact: function(e){
       var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
       if(myreg.test(this.data.contact.showContact)){
         wx.request({
-          url: "https://118.89.111.214:2333/api/set-message",
+          url: "https://www.xiaobenji.net/api/set-message",
           data: {
             number: this.data.contact.showContact,
             message: this.data.contact.showMessage,
