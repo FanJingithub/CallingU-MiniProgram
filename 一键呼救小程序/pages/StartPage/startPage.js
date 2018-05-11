@@ -4,8 +4,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    username: app.data.userinfo.username,
-    number: app.data.userinfo.number,
+    username: null,
+    number: null,
     code: null,
     password: null,
     key: null,
@@ -47,8 +47,8 @@ Page({
       })
     }
     if (this.data.number != null && this.data.username != null) {
-      app.data.userinfo.number = this.data.number;
-      app.data.userinfo.username = this.data.username;
+     wx.setStorageSync("number",this.data.number);
+     wx.setStorageSync("username",this.data.username);
       wx.request({
         url: "https://www.xiaobenji.net/api/login",
         header: {

@@ -14,7 +14,7 @@ Page({
     helpMessage: '\n暂时未发现救助人员',
     markers: [],
     circles: [],
-    number: app.data.userinfo.number
+    number: wx.getStorageSync("number"),
   },
   /**
    * 生命周期函数--监听页面加载
@@ -53,7 +53,7 @@ Page({
       },
       data: {
         "number": this.data.number,
-        "target": null,
+        "target": this.data.number,
         " state": -1,//state表示c端无求救。
         "phonestate": 0
       },

@@ -5,8 +5,8 @@ Page({
    */
   data: {
     open: false,
-    username: app.data.userinfo.username,
-    number: app.data.userinfo.number,
+    username: wx.getStorageSync("username"),
+    number: wx.getStorageSync("number"),
   },
   tap_open: function (e) {
     if (!this.data.open) {
@@ -45,17 +45,15 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    if (app.data.userinfo.username == null || app.data.userinfo.number == null) {
+  onLoad: function (query) {
+    this.setData({
+      number:wx.getStorageSync("number"),
+      username:wx.getStorageSync("username"),
+    })
+    if (this.data.number == null || this.data.username == null) {
       wx.navigateTo({
         url: '../StartPage/startPage'
       })
-    }
-    else {
-      this.setData({
-        username: app.data.userinfo.username,
-        number: app.data.userinfo.number
-      });
     }
   },
   logoff: function () {
@@ -65,13 +63,6 @@ Page({
       showCancel: true,
       success: function (res) {
         if (res.confirm) {
-          app.data.userinfo = {
-            username: null,
-            number: 0,
-            key: null,
-            sos: -1,
-            message: null,
-          }
           wx.redirectTo({
             url: '../StartPage/startPage',
           })

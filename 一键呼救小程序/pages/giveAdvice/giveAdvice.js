@@ -16,7 +16,7 @@ Page({
       wx.request({
         url: "https://www.xiaobenji.net/api/feedback",
         data: {
-          "number": app.data.userinfo.number,
+          "number": wx.getStorageSync("number"),
           "plaintext": this.data.adviceText,
         },
         method: "POST",

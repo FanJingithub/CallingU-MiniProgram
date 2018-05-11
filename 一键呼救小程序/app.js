@@ -1,9 +1,5 @@
 App({
   data:{
-    userinfo: {
-      username: null,
-      number: null,
-    },
     stateCode: {
       success: "200",
       beQueuing: "202",
