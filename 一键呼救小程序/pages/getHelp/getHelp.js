@@ -66,6 +66,7 @@ Page({
         });
         myAudio.stop();
         clearInterval(interval);
+        wx.redirectTo({ url: "../user/user" });
       }
     })
   },

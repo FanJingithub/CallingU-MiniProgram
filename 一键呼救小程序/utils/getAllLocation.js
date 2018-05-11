@@ -43,18 +43,19 @@ function getRescuerfun(that) {
     success: function (res) {
       var markers = that.data.markers;
       var resData = res.data;
+      console.log(resData);
+      var length = resData.length;
       var helpMessage = null;
       var preHelpMes = that.data.helpMessage;
-      for (var tempRes in resData) {
+      for (var i=1;i<length;i++) {
         markers.push({
           iconPath: "../images/rescuer.png",
-          id: 0,
-          latitude: tempRes.latitude,
-          longitude: tempRes.longitude,
+          latitude: resData[i].latitude,
+          longitude: resData[i].longitude,
           width: 40,
           height: 40
         });
-        helpMessage += "\n救助者：" + tempRes.number + " " + tempRes.message;
+        helpMessage += "\n救助者：" + resData[i].number + " " + resData[i].message;
       }
       helpMessage = helpMessage == null ? preHelpMes : helpMessage;
       that.setData({
@@ -72,7 +73,7 @@ function getNearHospitalAndAED(callback) {
     key: '2JYBZ-P2AWO-GHEWV-S6ILH-ACCF2-MCFWM'
   });
   qqmapsdk.search({
-    keyword: '医院',
+    keyword: '急救',
     page_size: 20,
     success: function (res) {
       var resData = res.data;
