@@ -6,7 +6,7 @@ function getNearHospitalAndAED(callback) {
     key: '2JYBZ-P2AWO-GHEWV-S6ILH-ACCF2-MCFWM'
   });
   qqmapsdk.search({
-    keyword: '医院',
+    keyword: '急救',
     page_size: 20,
     success: function (res) {
       var resData = res.data;
