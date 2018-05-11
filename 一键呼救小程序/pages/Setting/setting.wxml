@@ -19,7 +19,7 @@
   </view>
   <view class='edit'>
     <text>编辑联系人：</text>
-    <input placeholder="{{contact.showNumber ? contact.showNumber:'请输入联系人电话'}}" disabled='{{messDisabled}}' focus='{{contact.focus}}' class="contactInput" bindinput='contactInput' type='number' placeholder-class="{{autoMessage?'focus':'nofocus'}}"> </input>
+    <input placeholder="{{contact.showNumber ? contact.showNumber:'请输入联系人电话'}}" disabled='{{messDisabled}}' focus='{{contact.focus}}' class="contactInput" bindinput='contactInput' type='number' placeholder-class="{{autoMessage?'focus':'nofocus'}}" show-confirm-bar='false'> </input>
     <button form-type='submit' disabled='{{messDisabled}}' name='contactSubmit' bindtap='editContact'>{{contact.editContact}}</button>
   </view>
   <view class='edit'>

@@ -22,30 +22,6 @@ Page({
       });
     }
   },
-download:function(){
-  try {
-    var res = wx.getSystemInfoSync();
-    wx.request({
-      url: 'https://www.xiaobenji.net/api/download-new?platform=res.platform',
-      header: {
-        'content-type': 'application/x-www-form-urlencoded',// 表单
-        "cookie": wx.getStorageSync("sessionid"),
-      },
-      method: "GET",
-      success: function (res) {
-        console.log("download successful");
-      }
-    })
-    console.log(res.platform)
-  } catch (e) {
-    wx.showModal({
-      title: '提示',
-      content: '微信小程序出错了，请稍后再试~',
-      showCancel: false
-    });
-  }
-  
-},
   syncope: function () {
     wx.navigateTo({
       url: '../getHelp/getHelp?helpType=syncope',
