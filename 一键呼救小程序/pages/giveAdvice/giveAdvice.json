@@ -1,8 +1,8 @@
 {
-    "window": {
-      "backgroundTextStyle": "light",
-      "navigationBarBackgroundColor": "#db554e",
-      "navigationBarTitleText": "反馈",
-      "navigationBarTextStyle": "gray"
-    }
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#db554e",
+    "navigationBarTitleText": "反馈",
+    "navigationBarTextStyle": "gray"
+  }
 }

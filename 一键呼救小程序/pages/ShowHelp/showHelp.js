@@ -1,17 +1,10 @@
 var app=getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
-  },
+  onShareAppMessage: function () {
+    return {
+      title: "一键呼救",
+      desc: "一键呼救小程序",
+      path: "../startPage/startPage"
+    }
+  }
 })

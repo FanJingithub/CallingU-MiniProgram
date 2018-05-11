@@ -1,10 +1,13 @@
 <view class="content">
-<map id="getHelpMap" latitude="{{latitude}}" longitude='{{longitude}}' scale='{{scale}}' controls='{{controls}}' bindcontroltap='callForHelp' markers='{{markers}}' show-location/>
-<view class='showhelpInfo'>
-<text>我发送了</text><text class='helpType'>{{helpType}}</text><text>求救信号.</text>
-<text class='helpMessage'>{{helpMessage}}</text>
-</view>
-<view>
-<button bindtap='cancel' id='cancelHelp'>结束呼救</button>
-</view>
+  <map id="getHelpMap" latitude="{{latitude}}" longitude='{{longitude}}' scale='{{scale}}' controls='{{controls}}' bindcontroltap='callForHelp' markers='{{markers}}' circles='{{circles}}' show-location/>
+  <scroll-view class='showhelpInfo' scroll-y>
+    <text>我发送了</text>
+    <text class='helpType'>{{helpType}}</text>
+    <text>求救信号.</text>
+    <text class='helpMessage'>{{helpMessage}}</text>
+    <view>
+      <button bindtap='cancel' id='cancelHelp'>结束呼救</button>
+    </view>
+  </scroll-view>
+  
 </view>

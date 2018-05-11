@@ -1,15 +1,10 @@
-.adviceTextarea{
-  height: 500rpx;
+.adviceTextarea {
+  height: 600rpx;
   width: 650rpx;
- border-radius: 2rpx;
+  border-radius: 2rpx;
 }
 .btSubmit{
-  box-shadow: 2rpx,2rpx,2rpx,2rpx;
-  background-color:  rgb(219,85,79);
   color: white;
-}
-.btClicked{
-   box-shadow: 2rpx,2rpx,2rpx,2rpx;
-  background-color:  rgb(240,240,240);
-  color: white;
+  background-color: rgb(219, 85, 79);
+  border-radius: 6rpx;
 }

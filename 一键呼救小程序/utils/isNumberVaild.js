@@ -1,6 +1,6 @@
 //判断手机号码是否有效
 function isNumberVaild(number) {
-  if(number == undefined || number.length == 0 || number==null) {
+  if (number == undefined || number.length == 0 || number == null) {
     wx.showModal({
       title: "提示",
       content: '请输入手机号！',
@@ -26,10 +26,10 @@ function isNumberVaild(number) {
       })
       return false;
     }
-    else{
+    else {
       return true;
     }
   }
 
 }
-module.exports.isNumberVaild =isNumberVaild;
+module.exports.isNumberVaild = isNumberVaild;

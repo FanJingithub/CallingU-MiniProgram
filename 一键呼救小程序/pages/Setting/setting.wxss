@@ -1,31 +1,40 @@
-.content{
+.content {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
- background-repeat: repeat;
- padding-bottom: 240rpx;
- padding-top: 30rpx;
- background: rgb(240, 240,240)
-} 
-.small{
+  background-repeat: repeat;
+  padding-bottom: 240rpx;
+  padding-top: 30rpx;
+  background: rgb(240, 240, 240);
+}
+.nofocus{
+  color: gray
+}
+.focus{
+  color: black
+}
+.small {
   font-size: smaller;
   margin-left: 10rpx;
   margin-right: 130rpx;
 }
-#swCall120{
+
+#swCall120 {
   position: absolute;
   left: 80%;
-  top:60rpx;
+  top: 60rpx;
 }
-#swmessage{
+
+#swmessage {
   position: absolute;
   left: 80%;
-  top:200rpx;
+  top: 200rpx;
 }
-.choice{
+
+.choice {
   height: 120rpx;
   margin-bottom: 10rpx;
   width: 95%;
@@ -33,10 +42,12 @@
   border-bottom-color: gray;
   border-width: 2rpx;
 }
-.auto{
+
+.auto {
   width: 95%;
 }
-textarea{
+
+textarea {
   border-style: solid;
   border-color: gray;
   border-width: 2rpx;
@@ -44,17 +55,20 @@ textarea{
   height: 260rpx;
   width: 600rpx;
 }
-button{
-  box-shadow: 2rpx,2rpx,2rpx,2rpx;
-  background-color:  rgb(219,85,79);
+
+button {
+  box-shadow: 2rpx, 2rpx, 2rpx, 2rpx;
+  background-color: rgb(219, 85, 79);
   color: white;
   font-size: small;
 }
-.edit{
+
+.edit {
   margin-top: 50rpx;
 }
-.contactInput{
-   border-style: solid;
+
+.contactInput {
+  border-style: solid;
   border-color: gray;
   border-width: 2rpx;
   border-radius: 2rpx;

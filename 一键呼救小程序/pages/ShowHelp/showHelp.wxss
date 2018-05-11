@@ -1,0 +1,7 @@
+text{
+  color: rgb(128, 128, 128);
+}
+.view{
+  padding: 20rpx;
+  margin-top:-10 
+}

@@ -1,30 +1,30 @@
 <view class='content'>
-  <view class='auto choice'> 
+  <view class='auto choice'>
     <view>
       <text>自动拨打120</text>
     </view>
     <view class='small'>
       <text>开启后，当确认呼救时，将自动拨打120</text>
     </view>
-   <switch type='switch'  bindchange='sw120Change' id='swCall120' checked='{{autoCall}}'></switch>
+    <switch type='switch' bindchange='sw120Change' id='swCall120' checked='{{autoCall}}'></switch>
   </view>
-   <view class='auto'>
+  <view class='auto'>
     <view>
       <text>自动发送短信</text>
     </view>
     <view class='small'>
-     <text>开启后，当确认呼救时，将自动发送短信告知亲友</text>
+      <text>开启后，当确认呼救时，将自动发送短信告知亲友</text>
     </view>
-    <switch type='switch'  bindchange='swmessageChange' id='swmessage' checked='{{autoMessage}}'></switch>
+    <switch type='switch' bindchange='swmessageChange' id='swmessage' checked='{{autoMessage}}'></switch>
   </view>
- <view class='edit'>
-  <text>编辑联系人：</text>
-  <input   placeholder='{{contact.showNumber}}' disabled='{{messDisabled}}' focus='{{contact.focus}}' class="contactInput" bindinput='contactInput' type='number'> </input>
-  <button form-type='submit' disabled='{{messDisabled}}' name='contactSubmit' bindtap='editContact'>{{contact.editContact}}</button>
-  </view> 
   <view class='edit'>
-  <text>编辑短信：</text>
-  <textarea placeholder='{{message.showMessage}}'  disabled='{{messDisabled}}' focus='{{message.focus}}' name="messageTextarea" bindinput='messageTextarea'> </textarea>
-  <button form-type='submit' disabled='{{messDisabled}}' name='messageSubmit' bindtap='editMessage'>{{message.editMessage}}</button>
-   </view>
+    <text>编辑联系人：</text>
+    <input placeholder="{{contact.showNumber ? contact.showNumber:'请输入联系人电话'}}" disabled='{{messDisabled}}' focus='{{contact.focus}}' class="contactInput" bindinput='contactInput' type='number' placeholder-class="{{autoMessage?'focus':'nofocus'}}"> </input>
+    <button form-type='submit' disabled='{{messDisabled}}' name='contactSubmit' bindtap='editContact'>{{contact.editContact}}</button>
+  </view>
+  <view class='edit'>
+    <text>编辑短信：</text>
+    <textarea placeholder="{{message.showMessage?message.showMessage:'请输入短信'}}" disabled='{{messDisabled}}' focus='{{message.focus}}' name="messageTextarea" bindinput='messageTextarea' placeholder-class="{{autoMessage?'focus':'nofocus'}}" show-confirm-bar='false'> </textarea>
+    <button form-type='submit' disabled='{{messDisabled}}' name='messageSubmit' bindtap='editMessage'>{{message.editMessage}}</button>
+  </view>
 </view>

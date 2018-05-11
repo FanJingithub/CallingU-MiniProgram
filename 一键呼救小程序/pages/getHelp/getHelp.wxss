@@ -13,19 +13,18 @@
 }
 .showhelpInfo{
   position: absolute;
-  left: 50rpx;
+  left: 30rpx;
   top:620rpx;
-  width:86%;
-  height: 400rpx
+  width:94%;
+  height: 540rpx;
 }
 #cancelHelp{
-  position: absolute;
-  left: 50rpx;
-  top:1050rpx;
-  width: 86%;
-  box-shadow: 2rpx,2rpx,2rpx,2rpx;
+  width: 90%;
+  border-radius: 6rpx;
   background-color:rgb(219,85,79);
   color: white;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
 }
 .helpType{
   color: rgb(219,85,79);

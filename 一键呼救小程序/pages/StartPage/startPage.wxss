@@ -1,62 +1,72 @@
-.content{
+.content {
   height: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   background-repeat: repeat;
- padding: 60rpx;
+  padding: 60rpx;
 }
-text.title{
-  color:  rgb(219,85,79);
+
+text.title {
+  color: rgb(219, 85, 79);
   margin-top: 10rpx;
   margin-bottom: 10rpx;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 60rpx;
   text-align: center;
 }
-text.stronger{
+
+text.stronger {
   font-weight: bold;
   text-align: left;
 }
-.small{
+
+.small {
   font-size: small;
   margin-bottom: 10rpx;
-  color:gray;
+  color: gray;
 }
-.reminder{
+
+.reminder {
   text-align: left;
   padding-left: 10rpx;
   padding-right: 10rpx;
   width: 80%;
 }
-#logIn{
- font-size: large;
- color: white;
- background-color: rgb(219,85,79);
- margin-top: 10rpx;
- width: 100%;
- padding: 5rpx;
+
+#logIn {
+  font-size: large;
+  color: white;
+  background-color: rgb(219, 85, 79);
+  margin-top: 10rpx;
+  width: 100%;
+  padding: 5rpx;
 }
-input{
+
+input {
   margin-bottom: 20rpx;
   border: 1rpx solid lightgray;
   border-radius: 6rpx;
-  padding:20rpx;
+  padding: 20rpx;
 }
-.getCode{
+
+.getCode {
   font-size: small;
   color: white;
-  background-color: rgb(219,85,79);
+  background-color: rgb(219, 85, 79);
   padding: 6rpx;
   width: 35%;
   height: 92rpx;
 }
-.codeView{
+
+.codeView {
   display: flex;
 }
-.hover{
+
+.hover {
   background-color: gray;
 }
-.code{
-width: 54%;
+
+.code {
+  width: 54%;
 }

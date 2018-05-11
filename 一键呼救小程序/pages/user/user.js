@@ -1,14 +1,12 @@
-var app=getApp();
+var app = getApp();
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    open:false,
-    username: app.appData.userinfo.username,
-    number: app.appData.userinfo.number,
-    longitude:0,
-    latitude:0
+    open: false,
+    username: app.data.userinfo.username,
+    number: app.data.userinfo.number,
   },
   tap_open: function (e) {
     if (!this.data.open) {
@@ -17,30 +15,53 @@ Page({
       });
     }
   },
-  tap_close:function(e){
-    if(this.data.open){
+  tap_close: function (e) {
+    if (this.data.open) {
       this.setData({
-        open:false
+        open: false
       });
     }
   },
- 
-  syncope:function(){
+download:function(){
+  try {
+    var res = wx.getSystemInfoSync();
+    wx.request({
+      url: 'https://www.xiaobenji.net/api/download-new?platform=res.platform',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',// 表单
+        "cookie": wx.getStorageSync("sessionid"),
+      },
+      method: "GET",
+      success: function (res) {
+        console.log("download successful");
+      }
+    })
+    console.log(res.platform)
+  } catch (e) {
+    wx.showModal({
+      title: '提示',
+      content: '微信小程序出错了，请稍后再试~',
+      showCancel: false
+    });
+  }
+  
+},
+  syncope: function () {
     wx.navigateTo({
       url: '../getHelp/getHelp?helpType=syncope',
     })
   },
-  seriousInjury:function(){
+  seriousInjury: function () {
     wx.navigateTo({
       url: '../getHelp/getHelp?helpType=seriousInjury',
     })
   },
-  setting:function(){
+  setting: function () {
     wx.navigateTo({
       url: '../Setting/setting',
     })
   },
-  showHelp:function(){
+  showHelp: function () {
     wx.navigateTo({
       url: '../ShowHelp/showHelp',
     })
@@ -49,52 +70,59 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.appData.userinfo.username==null){
+    if (app.data.userinfo.username == null || app.data.userinfo.number == null) {
       wx.navigateTo({
         url: '../StartPage/startPage'
       })
     }
-     else {
-      this.setData({ 
-        username: app.appData.userinfo.username,
-        number:app.appData.userinfo.number
-         });
+    else {
+      this.setData({
+        username: app.data.userinfo.username,
+        number: app.data.userinfo.number
+      });
     }
   },
-  logoff:function(){
+  logoff: function () {
     wx.showModal({
       title: "提示",
       content: '您真的确定退出吗？',
       showCancel: true,
-      success:function(res){
-        if(res.confirm){
-          app.appData.userinfo = {
-             username: null,
-             number: 0,
-             key: null,
-             sos: -1,
-             message: null,
+      success: function (res) {
+        if (res.confirm) {
+          app.data.userinfo = {
+            username: null,
+            number: 0,
+            key: null,
+            sos: -1,
+            message: null,
           }
-         wx.redirectTo({
-           url: '../StartPage/startPage',
-        })
-      }
+          wx.redirectTo({
+            url: '../StartPage/startPage',
+          })
+        }
       },
     })
   },
-giveAdvice:function(){
-  wx.navigateTo({
-    url: '../giveAdvice/giveAdvice',
-  })
-},
-onShow:function(){
-    this.setData({
-      open:false,
-      username: app.appData.userinfo.username,
-      number: app.appData.userinfo.number,
-      longitude:0,
-      latitude:0
+  giveAdvice: function () {
+    wx.navigateTo({
+      url: '../giveAdvice/giveAdvice',
     })
-},
-
+  },
+  onUnload:function(){
+    this.setData({
+      open:false
+    })
+  },
+  onHide:function(){
+    this.setData({
+      open: false
+    })
+  },
+  onShareAppMessage: function () {
+    return {
+      title: "一键呼救",
+      desc: "一键呼救小程序",
+      path: "../startPage/startPage"
+    }
+  }
 })

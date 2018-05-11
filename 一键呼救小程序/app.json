@@ -1,16 +1,16 @@
 {
-  "pages":[
-      "pages/StartPage/startPage",
+  "pages": [
+    "pages/StartPage/startPage",
     "pages/user/user",
     "pages/getHelp/getHelp",
     "pages/ShowHelp/showHelp",
     "pages/Setting/setting",
     "pages/giveAdvice/giveAdvice"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#db554e",
     "navigationBarTitleText": "一键呼救",
-    "navigationBarTextStyle":"gray"
+    "navigationBarTextStyle": "gray"
   }
 }
